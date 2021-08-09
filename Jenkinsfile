@@ -78,8 +78,8 @@ pipeline{
         stage("Deploy"){
             steps{
                 sh """
-                docker build -t SpringbootEmployee:v1 .
-                docker run -d -p 8086:8080 --name SpringbootEmployee SpringbootEmployee:v1
+                docker build -t springbootemployee:v1 .
+                docker run -d -p 8090:8080 --name SpringbootEmployee springbootemployee:v1
                 """
             }
             
