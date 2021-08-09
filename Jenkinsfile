@@ -4,7 +4,7 @@ pipeline{
         PATH = "/usr/share/maven/bin:$PATH"
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "34.93.225.134:8081"
+        NEXUS_URL = "35.200.222.26:8081"
         NEXUS_REPOSITORY = "SpringbootEmployee"
         NEXUS_CREDENTIAL_ID = "123"
     }
@@ -70,7 +70,7 @@ pipeline{
                 sh """
                 mvn sonar:sonar \
   -Dsonar.projectKey=Springboot_Employee \
-  -Dsonar.host.url=http://34.93.225.134:9000 \
+  -Dsonar.host.url=http://35.200.222.26:9000 \
   -Dsonar.login=e05d85ba1d7cd50c5c23f9d4a47be0ef4992de8c
   """
             }
