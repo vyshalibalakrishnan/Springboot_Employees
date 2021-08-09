@@ -78,8 +78,6 @@ pipeline{
         stage("Deploy"){
             steps{
                 sh """
-                docker rm -f SpringbootEmployee
-                docker rmi springbootemployee:v1
                 docker build -t springbootemployee:v1 .
                 docker run -d -p 8090:8080 --name SpringbootEmployee springbootemployee:v1
                 """
